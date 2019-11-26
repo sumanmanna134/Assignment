@@ -3,9 +3,9 @@
 public class assignemnt {
 
     public static void main(String[] args){
-        String statement =  "Java and JavaScript are totally different, JavaScript follows Java";
+        String statement =  "Java and JavaScript repeat are totally different, JavaScript follows Java";
         int count;
-        String repeat="repeat";
+        String repeat=" ";
         statement = statement.toLowerCase();
         System.out.println("Given Statement "+statement);
         String clean_statement = statement.replaceAll("\\s*,\\s*", " ");
