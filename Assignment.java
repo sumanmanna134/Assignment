@@ -13,7 +13,7 @@ public class assignment {
     }
 
     public static Set<String> duplicate_test(String input_statement){
-        int count=0;
+        //int count=0;
         
         if(input_statement== null || input_statement.isEmpty()){
             return Collections.emptySet();
