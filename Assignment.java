@@ -1,34 +1,51 @@
 
 
-public class assignemnt {
+import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
-    public static void main(String[] args){
-        String statement =  "Java and JavaScript repeat are totally different, JavaScript follows Java";
-        int count;
-        String repeat=" ";
-        statement = statement.toLowerCase();
-        System.out.println("Given Statement "+statement);
-        String clean_statement = statement.replaceAll("\\s*,\\s*", " ");
-        System.out.println("Clean Statement "+clean_statement);
-        String token[] = clean_statement.split(" ");
-        System.out.println("No of Token "+token.length);
+public class assignment {
+    public static void main(String[] args) throws Exception {  
+        String Statement= "Java and JavaScript repeat are totally different, JavaScript follows Java";
+        Set<String> duplicates_words = duplicate_test(Statement.toLowerCase());
+        System.out.println( duplicates_words);
+    }
 
-        System.out.println("Duplicate Words:");
-        for(int i=0;i<token.length;i++){
-            count=1;
-            for(int j=i+1;j<token.length;j++){
-                if(token[i].equals(token[j])){
-                    count++;
-                    token[j]=repeat;
-                }
-            }
-            if(count>1 && token[i]!=repeat){
-                System.out.println(token[i]+" occurs "+count+" times");
-
-            }
+    public static Set<String> duplicate_test(String input_statement){
+        int count=0;
+        
+        if(input_statement== null || input_statement.isEmpty()){
+            return Collections.emptySet();
         }
+        Set<String> repeated_words = new HashSet<>();
+        //List<Integer> a = new ArrayList<Integer>();
+        String clean_statement = input_statement.replaceAll("\\s*,\\s*", " ");
+        String token[] = clean_statement.split(" ");
+        System.out.println("Number of Splited Token " + token.length);
+        Set<String> set = new HashSet<>();
+        
+        for(String Tokens : token){
+            if(!set.add(Tokens)){
+                //count++;
+                repeated_words.add(Tokens);
+                
+                
+                
+            }
+            
+            
+        }
+        
+        //a.add(count);
+        //System.out.println(a);
+        
+        
+        
+        return repeated_words;
+
+
 
 
     }
 }
-
