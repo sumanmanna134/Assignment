@@ -4,7 +4,7 @@
 1.(Firstly in given Statement has Many Capital letters and Small letters ) so first convert in lowercase.
 2. (statement has many spaces and one  "," special Character) so Clean it using regular expression. i use "\s*,\s*" then replace to space.
 3. after remove "," i spilt into token by removing space.
-4. Then take a "String repeat" flag for duplicate token.
+4. Then take a " " flag for duplicate token.
 5. I use Two loop is use for find duplicate words.
 6. Outer loop will select a word and Initialize variable count to 1. 
 7. Inner loop will compare the word selected by outer loop with rest of the words.
